@@ -1,0 +1,603 @@
+Terminals unused in grammar
+
+   tCHAR
+
+
+Grammar
+
+    0 $accept: main $end
+
+    1 main: execs
+
+    2 execs: exec execs
+    3      | exec
+
+    4 exec: tMOVE tREG tIDSEP tINT
+    5     | tCOPY tREG tIDSEP tREG
+    6     | tPLUS tREG tIDSEP tREG
+    7     | tSUBS tREG tIDSEP tREG
+    8     | tMULT tREG tIDSEP tREG
+    9     | tDIVX tREG tIDSEP tREG
+   10     | tREAD tREG tIDSEP tINT
+   11     | tSAVE tREG tIDSEP tINT
+   12     | tJUMP tINT
+   13     | tSHOW tREG
+   14     | tJCVD tREG tIDSEP tINT
+   15     | tEQUL tREG tIDSEP tREG
+   16     | tDIFF tREG tIDSEP tREG
+   17     | tINFR tREG tIDSEP tREG
+   18     | tINFE tREG tIDSEP tREG
+   19     | tSUPR tREG tIDSEP tREG
+   20     | tSUPE tREG tIDSEP tREG
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+tPLUS (258) 6
+tSUBS (259) 7
+tMULT (260) 8
+tDIVX (261) 9
+tCOPY (262) 5
+tREAD (263) 10
+tSAVE (264) 11
+tMOVE (265) 4
+tJUMP (266) 12
+tJCVD (267) 14
+tEQUL (268) 15
+tDIFF (269) 16
+tINFR (270) 17
+tINFE (271) 18
+tSUPR (272) 19
+tSUPE (273) 20
+tINT (274) 4 10 11 12 14
+tCHAR (275)
+tREG (276) 4 5 6 7 8 9 10 11 13 14 15 16 17 18 19 20
+tIDSEP (277) 4 5 6 7 8 9 10 11 14 15 16 17 18 19 20
+tSHOW (278) 13
+
+
+Nonterminals, with rules where they appear
+
+$accept (24)
+    on left: 0
+main (25)
+    on left: 1, on right: 0
+execs (26)
+    on left: 2 3, on right: 1 2
+exec (27)
+    on left: 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20, on right:
+    2 3
+
+
+State 0
+
+    0 $accept: . main $end
+
+    tPLUS  shift, and go to state 1
+    tSUBS  shift, and go to state 2
+    tMULT  shift, and go to state 3
+    tDIVX  shift, and go to state 4
+    tCOPY  shift, and go to state 5
+    tREAD  shift, and go to state 6
+    tSAVE  shift, and go to state 7
+    tMOVE  shift, and go to state 8
+    tJUMP  shift, and go to state 9
+    tJCVD  shift, and go to state 10
+    tEQUL  shift, and go to state 11
+    tDIFF  shift, and go to state 12
+    tINFR  shift, and go to state 13
+    tINFE  shift, and go to state 14
+    tSUPR  shift, and go to state 15
+    tSUPE  shift, and go to state 16
+    tSHOW  shift, and go to state 17
+
+    main   go to state 18
+    execs  go to state 19
+    exec   go to state 20
+
+
+State 1
+
+    6 exec: tPLUS . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 21
+
+
+State 2
+
+    7 exec: tSUBS . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 22
+
+
+State 3
+
+    8 exec: tMULT . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 23
+
+
+State 4
+
+    9 exec: tDIVX . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 24
+
+
+State 5
+
+    5 exec: tCOPY . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 25
+
+
+State 6
+
+   10 exec: tREAD . tREG tIDSEP tINT
+
+    tREG  shift, and go to state 26
+
+
+State 7
+
+   11 exec: tSAVE . tREG tIDSEP tINT
+
+    tREG  shift, and go to state 27
+
+
+State 8
+
+    4 exec: tMOVE . tREG tIDSEP tINT
+
+    tREG  shift, and go to state 28
+
+
+State 9
+
+   12 exec: tJUMP . tINT
+
+    tINT  shift, and go to state 29
+
+
+State 10
+
+   14 exec: tJCVD . tREG tIDSEP tINT
+
+    tREG  shift, and go to state 30
+
+
+State 11
+
+   15 exec: tEQUL . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 31
+
+
+State 12
+
+   16 exec: tDIFF . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 32
+
+
+State 13
+
+   17 exec: tINFR . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 33
+
+
+State 14
+
+   18 exec: tINFE . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 34
+
+
+State 15
+
+   19 exec: tSUPR . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 35
+
+
+State 16
+
+   20 exec: tSUPE . tREG tIDSEP tREG
+
+    tREG  shift, and go to state 36
+
+
+State 17
+
+   13 exec: tSHOW . tREG
+
+    tREG  shift, and go to state 37
+
+
+State 18
+
+    0 $accept: main . $end
+
+    $end  shift, and go to state 38
+
+
+State 19
+
+    1 main: execs .
+
+    $default  reduce using rule 1 (main)
+
+
+State 20
+
+    2 execs: exec . execs
+    3      | exec .
+
+    tPLUS  shift, and go to state 1
+    tSUBS  shift, and go to state 2
+    tMULT  shift, and go to state 3
+    tDIVX  shift, and go to state 4
+    tCOPY  shift, and go to state 5
+    tREAD  shift, and go to state 6
+    tSAVE  shift, and go to state 7
+    tMOVE  shift, and go to state 8
+    tJUMP  shift, and go to state 9
+    tJCVD  shift, and go to state 10
+    tEQUL  shift, and go to state 11
+    tDIFF  shift, and go to state 12
+    tINFR  shift, and go to state 13
+    tINFE  shift, and go to state 14
+    tSUPR  shift, and go to state 15
+    tSUPE  shift, and go to state 16
+    tSHOW  shift, and go to state 17
+
+    $default  reduce using rule 3 (execs)
+
+    execs  go to state 39
+    exec   go to state 20
+
+
+State 21
+
+    6 exec: tPLUS tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 40
+
+
+State 22
+
+    7 exec: tSUBS tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 41
+
+
+State 23
+
+    8 exec: tMULT tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 42
+
+
+State 24
+
+    9 exec: tDIVX tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 43
+
+
+State 25
+
+    5 exec: tCOPY tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 44
+
+
+State 26
+
+   10 exec: tREAD tREG . tIDSEP tINT
+
+    tIDSEP  shift, and go to state 45
+
+
+State 27
+
+   11 exec: tSAVE tREG . tIDSEP tINT
+
+    tIDSEP  shift, and go to state 46
+
+
+State 28
+
+    4 exec: tMOVE tREG . tIDSEP tINT
+
+    tIDSEP  shift, and go to state 47
+
+
+State 29
+
+   12 exec: tJUMP tINT .
+
+    $default  reduce using rule 12 (exec)
+
+
+State 30
+
+   14 exec: tJCVD tREG . tIDSEP tINT
+
+    tIDSEP  shift, and go to state 48
+
+
+State 31
+
+   15 exec: tEQUL tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 49
+
+
+State 32
+
+   16 exec: tDIFF tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 50
+
+
+State 33
+
+   17 exec: tINFR tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 51
+
+
+State 34
+
+   18 exec: tINFE tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 52
+
+
+State 35
+
+   19 exec: tSUPR tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 53
+
+
+State 36
+
+   20 exec: tSUPE tREG . tIDSEP tREG
+
+    tIDSEP  shift, and go to state 54
+
+
+State 37
+
+   13 exec: tSHOW tREG .
+
+    $default  reduce using rule 13 (exec)
+
+
+State 38
+
+    0 $accept: main $end .
+
+    $default  accept
+
+
+State 39
+
+    2 execs: exec execs .
+
+    $default  reduce using rule 2 (execs)
+
+
+State 40
+
+    6 exec: tPLUS tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 55
+
+
+State 41
+
+    7 exec: tSUBS tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 56
+
+
+State 42
+
+    8 exec: tMULT tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 57
+
+
+State 43
+
+    9 exec: tDIVX tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 58
+
+
+State 44
+
+    5 exec: tCOPY tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 59
+
+
+State 45
+
+   10 exec: tREAD tREG tIDSEP . tINT
+
+    tINT  shift, and go to state 60
+
+
+State 46
+
+   11 exec: tSAVE tREG tIDSEP . tINT
+
+    tINT  shift, and go to state 61
+
+
+State 47
+
+    4 exec: tMOVE tREG tIDSEP . tINT
+
+    tINT  shift, and go to state 62
+
+
+State 48
+
+   14 exec: tJCVD tREG tIDSEP . tINT
+
+    tINT  shift, and go to state 63
+
+
+State 49
+
+   15 exec: tEQUL tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 64
+
+
+State 50
+
+   16 exec: tDIFF tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 65
+
+
+State 51
+
+   17 exec: tINFR tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 66
+
+
+State 52
+
+   18 exec: tINFE tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 67
+
+
+State 53
+
+   19 exec: tSUPR tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 68
+
+
+State 54
+
+   20 exec: tSUPE tREG tIDSEP . tREG
+
+    tREG  shift, and go to state 69
+
+
+State 55
+
+    6 exec: tPLUS tREG tIDSEP tREG .
+
+    $default  reduce using rule 6 (exec)
+
+
+State 56
+
+    7 exec: tSUBS tREG tIDSEP tREG .
+
+    $default  reduce using rule 7 (exec)
+
+
+State 57
+
+    8 exec: tMULT tREG tIDSEP tREG .
+
+    $default  reduce using rule 8 (exec)
+
+
+State 58
+
+    9 exec: tDIVX tREG tIDSEP tREG .
+
+    $default  reduce using rule 9 (exec)
+
+
+State 59
+
+    5 exec: tCOPY tREG tIDSEP tREG .
+
+    $default  reduce using rule 5 (exec)
+
+
+State 60
+
+   10 exec: tREAD tREG tIDSEP tINT .
+
+    $default  reduce using rule 10 (exec)
+
+
+State 61
+
+   11 exec: tSAVE tREG tIDSEP tINT .
+
+    $default  reduce using rule 11 (exec)
+
+
+State 62
+
+    4 exec: tMOVE tREG tIDSEP tINT .
+
+    $default  reduce using rule 4 (exec)
+
+
+State 63
+
+   14 exec: tJCVD tREG tIDSEP tINT .
+
+    $default  reduce using rule 14 (exec)
+
+
+State 64
+
+   15 exec: tEQUL tREG tIDSEP tREG .
+
+    $default  reduce using rule 15 (exec)
+
+
+State 65
+
+   16 exec: tDIFF tREG tIDSEP tREG .
+
+    $default  reduce using rule 16 (exec)
+
+
+State 66
+
+   17 exec: tINFR tREG tIDSEP tREG .
+
+    $default  reduce using rule 17 (exec)
+
+
+State 67
+
+   18 exec: tINFE tREG tIDSEP tREG .
+
+    $default  reduce using rule 18 (exec)
+
+
+State 68
+
+   19 exec: tSUPR tREG tIDSEP tREG .
+
+    $default  reduce using rule 19 (exec)
+
+
+State 69
+
+   20 exec: tSUPE tREG tIDSEP tREG .
+
+    $default  reduce using rule 20 (exec)
